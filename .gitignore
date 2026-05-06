@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Additional local/runtime artifacts to exclude
+env/
+.cache/
+**/.cache/
+tmp/
+temp/
+*.tmp
+Desktop.ini

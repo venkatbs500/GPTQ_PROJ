@@ -1,0 +1,4 @@
+model,perplexity,eval_seconds,num_loss_tokens,status
+FP16 (original),7.39997839,229.8241,332646,ok
+GPTQ 4-bit,8.03763019,314.7024,332646,ok
+GPTQ 3-bit,16.14522287,439.5526,332646,ok

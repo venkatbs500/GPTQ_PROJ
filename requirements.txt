@@ -1,0 +1,62 @@
+# =============================================================================
+# Windows + NVIDIA CUDA 12.1 (cu121) — Python 3.10
+# =============================================================================
+#
+# INSTALL ORDER (important):
+#   1) Create & activate a Python 3.10 venv (see README.md).
+#   2) Install PyTorch / torchvision / torchaudio from the cu121 wheel index
+#      using the pinned versions in README.md — BEFORE this file.
+#   3) pip install -r requirements.txt
+#
+# Why PyTorch is not listed here:
+#   The official cu121 wheels live on download.pytorch.org, not PyPI. Installing
+#   torch first guarantees a CUDA build; a plain `pip install torch` on Windows
+#   often pulls a CPU-only wheel and breaks AutoGPTQ runtime.
+#
+# Triton (avoid on Windows):
+#   AutoGPTQ exposes Triton only as an *optional* extra (`auto-gptq[triton]`).
+#   Do not install that extra on Windows — Triton is aimed at Linux and tends
+#   to fail or conflict. The default `auto-gptq` install does not require Triton.
+#   Older AutoAWQ releases (e.g. 0.2.1–0.2.4) listed `triton`; if you opt into
+#   AutoAWQ manually, use a release with `autoawq-kernels` win_amd64 wheels.
+#
+# Transformers / tokenizers:
+#   transformers==4.37.2 requires tokenizers >=0.14,<0.19. We constrain
+#   tokenizers explicitly so a dependency bump cannot break that invariant.
+#
+# AutoAWQ on Windows (optional):
+#   AWQ is intentionally optional in this project due to import compatibility
+#   constraints on some Windows + transformers combinations. If you enable AWQ,
+#   prefer autoawq==0.2.5 (0.2.6 pins torch==2.3.1).
+#
+# NumPy:
+#   Many torch 2.2.x + quantization stacks were validated on NumPy 1.x. We cap
+#   NumPy <2 to reduce binary ABI surprises on Windows.
+# =============================================================================
+
+transformers==4.37.2
+tokenizers>=0.15.0,<0.19.0
+auto-gptq==0.7.1
+# AutoAWQ is optional on Windows in this project.
+# Install only if you need AWQ runs:
+#   pip install autoawq==0.2.5
+
+# Pulled in by AutoGPTQ; pinned for reproducibility with transformers 4.37.x
+peft==0.8.2
+
+accelerate>=0.26.0,<0.29.0
+datasets>=2.16.0,<2.19.0
+
+safetensors>=0.4.1
+sentencepiece>=0.1.99
+huggingface-hub>=0.20.0,<1.0.0
+typing-extensions>=4.8.0
+pyyaml>=6.0.1
+protobuf>=3.20.0,<5.0.0
+
+numpy>=1.24.0,<2.0.0
+
+matplotlib>=3.7.0,<3.10.0
+pandas>=2.0.0,<2.3.0
+tqdm>=4.66.0
+einops>=0.7.0

@@ -1,0 +1,4 @@
+model,load_alloc_gib,load_reserved_gib,load_peak_allocated_gib,post_gen_alloc_gib,post_gen_reserved_gib,post_gen_peak_allocated_gib,peak_delta_gen_gib,status
+FP16 (original),2.06170654,2.14843750,2.06170654,2.06964159,2.16992188,2.07616520,0.01445866,ok
+GPTQ 4-bit,0.74364328,0.77734375,0.74364376,0.74371672,0.83789062,0.79896164,0.05531788,ok
+GPTQ 3-bit,0.62960291,0.63671875,0.62960339,0.62967634,0.81445312,0.73888397,0.10928059,ok

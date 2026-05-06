@@ -1,0 +1,4 @@
+model,tokens_per_sec,latency_ms,avg_runtime_s,avg_new_tokens,peak_gpu_gib,warmup_runs,timed_runs,status
+FP16 (original),43.719803,22.872930,0.02287293,1.0000,2.076166,3,10,ok
+GPTQ 4-bit,6.444799,155.163870,0.15516387,1.0000,0.798962,3,10,ok
+GPTQ 3-bit,2.623492,381.171420,0.38117142,1.0000,0.738884,3,10,ok

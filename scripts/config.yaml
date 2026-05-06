@@ -1,0 +1,35 @@
+# Experiment defaults: TinyLlama, WikiText-2, GPTQ / AWQ, outputs
+model:
+  name_or_path: "TinyLlama/TinyLlama-1.1B-Intermediary-2.5T-1.0"
+  trust_remote_code: false
+
+dataset:
+  wikitext:
+    name: "wikitext"
+    config: "wikitext-2-raw-v1"
+    split: "test"
+
+gptq:
+  bits: 4
+  group_size: 128
+  damp_percent: 0.01
+  desc_act: false
+
+awq:
+  bits: 4
+  group_size: 128
+  version: "gemm"
+
+benchmark:
+  perplexity_max_length: 2048
+  inference:
+    prompt_tokens: 128
+    max_new_tokens: 64
+    batch_size: 1
+    runs_warmup: 3
+    runs_timed: 10
+
+output:
+  results_dir: "results"
+  graphs_dir: "graphs"
+  models_dir: "models/checkpoints"

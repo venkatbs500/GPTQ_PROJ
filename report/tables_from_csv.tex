@@ -1,0 +1,51 @@
+% ---------------------------------------------------------------------------
+% Final tables populated from generated benchmark CSVs.
+% ---------------------------------------------------------------------------
+
+\begin{table}[t]
+  \caption{WikiText-2 test perplexity (lower is better), from \texttt{results/csv/perplexity\_results.csv}.}
+  \label{tab:ppl}
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Perplexity} \\
+    \midrule
+    FP16 (baseline)      & 7.40 \\
+    GPTQ 4-bit           & 8.04 \\
+    GPTQ 3-bit           & 16.15 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Greedy decoding throughput on a shared prompt (higher tok/s is better), from \texttt{results/csv/speed\_results.csv}.}
+  \label{tab:speed}
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Tokens/s} \\
+    \midrule
+    FP16      & 43.72 \\
+    GPTQ 4-bit & 6.44 \\
+    GPTQ 3-bit & 2.62 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[t]
+  \caption{Peak GPU memory usage in GiB from \texttt{results/csv/memory\_results.csv} (lower is better).}
+  \label{tab:memory}
+  \centering
+  \small
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Peak GPU memory (GiB)} \\
+    \midrule
+    FP16      & 2.076 \\
+    GPTQ 4-bit & 0.799 \\
+    GPTQ 3-bit & 0.739 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
