@@ -9,7 +9,7 @@ Benchmark **FP16**, **GPTQ 4-bit**, and **GPTQ 3-bit** on a small LLM (e.g. **Ti
 
 ---
 
-## Table of contents
+## Table of contents-
 
 - [Repository layout](#repository-layout)
 - [Setup (exact installation order)](#setup-exact-installation-order)
