@@ -223,9 +223,3 @@ This repo pins **`transformers==4.37.2`** and **`auto-gptq==0.7.1`**. Upgrading 
 
 - Lower batch size, sequence length, or model size in `scripts/config.yaml`.
 - Close other GPU applications; check `nvidia-smi` for memory use.
-
----
-
-## License
-
-Specify your license here (for example MIT, Apache-2.0, or “All rights reserved”).
