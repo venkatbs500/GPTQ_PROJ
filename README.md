@@ -58,8 +58,8 @@ py -3.10 --version
 ### 1) Clone (optional) and enter the repo
 
 ```powershell
-git clone https://github.com/<your-org>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/venkatbs500/GPTQ_PROJ.git
+cd GPTQ_PROJ
 ```
 
 ### 2) Create and activate a virtual environment (Python 3.10)
